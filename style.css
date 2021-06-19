@@ -171,7 +171,6 @@ a[href="https://www.weatherapi.com/"], a[href="https://github.com/Jennifer1919"]
     background-color: #FFF9F9;
     padding: 20px 20px;
     border-radius: 20px;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -195,6 +194,10 @@ a[href="https://www.weatherapi.com/"], a[href="https://github.com/Jennifer1919"]
     
     header, .input-div, footer, .about-us-div{
         grid-column: 1/3;
+    }
+    
+    .about-us-div{
+        height: 400px;
     }
     
     header{
