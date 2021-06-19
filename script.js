@@ -25,6 +25,7 @@ var getWeather = function(){
         .then(data => {
 
             console.log(data);
+            .catch(err => alert("can't display data))
 
 
             //changes the current temperature and icon and description as well as the icon and description for the day after
@@ -45,6 +46,8 @@ var getWeather = function(){
                 maxTemp[i].innerHTML = data['forecast']['forecastday'][i]['day']['maxtemp_c'] + " °C";
                
             }
+        
+        .catch(err => alert("can't modify HTLM1"))
             
             /*we call another json file which contains a list of code and the corresponding weather.Codes inside this weather_code.json file are
             the same as the one in the API call. If we get a match, depending on the weather, different information are displayed on the website*/
@@ -52,6 +55,7 @@ var getWeather = function(){
                 .then(response2 => response2.json())
                     .then(data2 =>{
                         console.log(data2)
+                .catch(err => alert("can't load data2"))
 
                         for(var i = 0; i < codeValue.length; i++){ //loop for the "now" and "tommorow" information
 
