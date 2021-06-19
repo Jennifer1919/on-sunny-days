@@ -17,10 +17,10 @@ var footer = document.getElementsByTagName('footer');
 
 /*getWeather: this is the main function of the project. When it is called, the name of the city typed by the user is place inside the API
 call in order to get the weather information for that city. The information are then displayed on the website*/
-
+//https://api.weatherapi.com/v1/current.json?key=00bbd92646d54cfcab1151251211806&q=London&aqi=no
 var getWeather = function(){
     //call the API
-    fetch("http://api.weatherapi.com/v1/forecast.json?key=00bbd92646d54cfcab1151251211806&q="+input[0].value+"&days=2")
+    fetch("https://api.weatherapi.com/v1/current.json?key=00bbd92646d54cfcab1151251211806&q="+input[0].value+"&days=2")
         .then(response => response.json())
         .then(data => {
 
